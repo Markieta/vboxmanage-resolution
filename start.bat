@@ -1,5 +1,6 @@
 :: Automatically launch VirtualBox OS X 10.10 Yosemite virtual machine
 :: with specified resolution.
+
 :: Note: May only work on specific version
 :: https://www.youtube.com/watch?v=orrNHlgb-2Y
 
@@ -22,5 +23,5 @@ SET     VM_NAME="OS X 10.10 Yosemite"
     SET N=5
 )
 
-%INSTALL_DIR%\VBoxManage setextradata %VM_NAME% VBoxInternal2/EfiGopMode %N%
-%INSTALL_DIR%\VBoxManage startvm      %VM_NAME%
+"%INSTALL_DIR%\VBoxManage.exe" setextradata %VM_NAME% VBoxInternal2/EfiGopMode %N%
+"%INSTALL_DIR%\VBoxManage.exe" startvm      %VM_NAME%
